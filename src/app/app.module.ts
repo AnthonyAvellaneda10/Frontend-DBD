@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login/login.component';
 import { RegistroComponent } from './registro/registro/registro.component';
 import { SharedModule } from './shared/shared.module';
 import { BodyComponent } from './body/body/body.component';
+import { FooterComponent } from './footer/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BodyComponent } from './body/body/body.component';
     HeaderComponent,
     LoginComponent,
     RegistroComponent,
-    BodyComponent
+    BodyComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

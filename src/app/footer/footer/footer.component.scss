@@ -1,0 +1,307 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(219, 69%, 56%);
+  --first-color-alt: hsl(219, 69%, 52%);
+  --title-color: hsl(219, 8%, 95%);
+  --text-color: hsl(219, 8%, 75%);
+  --text-color-light: hsl(219, 4%, 55%);
+  --white-color: #fff;
+  --body-color: hsl(219, 4%, 4%);
+  --container-color: hsl(219, 4%, 7%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Exo', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Exo', sans-serif;
+  font-size: 1rem;
+  background-color: hsl(219, 4%, 4%);
+  color: hsl(219, 8%, 75%);
+}
+
+h1, h2, h3 {
+  color: hsl(219, 8%, 95%);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+footer{
+  background-color: hsl(219, 4%, 4%);
+}
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-right: 1.5rem;
+  margin-left: 11.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== HEADER & NAV ===============*/
+
+
+/* Show menu */
+
+
+/* Change background header */
+
+
+/* Active link */
+
+
+/*=============== HOME ===============*/
+
+
+/* Button animate */
+
+
+/*=============== BUTTON ===============*/
+
+
+/*=============== ABOUT ===============*/
+
+
+/*=============== POPULAR ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== FEATURES ===============*/
+
+
+/*=============== FEATURED ===============*/
+
+
+/* Active link featured */
+
+
+/*=============== OFFER ===============*/
+
+
+/*=============== LOGOS ===============*/
+
+
+/*=============== FOOTER ===============*/
+.footer{
+  position: relative;
+  overflow: hidden;
+}
+
+.footer .shape__big,
+.footer .shape__small{
+  position: absolute;
+}
+
+.footer .shape__big{
+  width: 300px;
+  height: 300px;
+  left: -12rem;
+  top: 6rem;
+}
+
+.footer .shape__small{
+  right: -13rem;
+  bottom: -6rem;
+}
+
+.footer__container{
+  row-gap: 2.5rem;
+  position: relative;
+}
+
+.footer__logo{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  color: hsl(219, 8%, 95%);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  transition: .3s;
+}
+
+.footer__logo i{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.footer__logo:hover{
+  color: hsl(219, 69%, 56%);;
+}
+
+.footer__title{
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer__links{
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+}
+
+.footer__link,
+.footer__social-link{
+  color: hsl(219, 8%, 75%);
+  transition: .3s;
+}
+
+.footer__link:hover,
+.footer__social-link:hover{
+  color: hsl(219, 8%, 95%);
+}
+
+.footer__social{
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.footer__social-link{
+  font-size: 1.25rem;
+}
+
+.footer__copy{
+  display: block;
+  margin-top: 4.5rem;
+  text-align: center;
+  font-size: .813rem;
+  color: hsl(219, 4%, 55%);
+}
+/*=============== SCROLL BAR ===============*/
+/*::-webkit-scrollbar{
+  width: 6rem;
+  background-color: hsl(219, 4%, 16%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: hsl(219, 4%, 24%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(219, 4%, 32%);
+  border-radius: 1rem;
+}*/
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px){
+
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px){
+    
+}
+
+@media screen and (min-width: 767px){
+    .footer__container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* For large devices */
+@media screen and (min-width: 1040px){
+  .footer__container{
+    grid-template-columns: repeat(4, max-content);
+    justify-content: space-between;
+  }
+  .footer__logo{
+    column-gap: .5rem;
+  }
+  .footer__logo i{
+    font-size: 2rem;
+  }
+  .footer__title{
+    margin-bottom: 1.5rem;
+  }
+  .footer__links{
+    row-gap: .75rem;
+  }
+  .footer__social-link{
+    font-size: 1.5rem;
+  }
+  .footer__copy{
+    margin-top: 3.5rem;
+    padding-top: 1rem;
+  }
+}
