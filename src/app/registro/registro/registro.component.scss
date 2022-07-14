@@ -6,10 +6,14 @@ body {
     font-family: sans-serif;
     height: 100vh;
   }
-  
+  body{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+  } 
   .login-box {
     width: 400px;
-    height: 585px;
+    height: 678px;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     top: 50%;
@@ -21,12 +25,13 @@ body {
   }
   
   .login-box .avatar {
-    width: 100px;
-    height: 100px;
+    width: 79px;
+    height: 78px;
     border-radius: 50%;
     position: absolute;
-    top: -50px;
-    left: calc(50% - 50px);
+    top: -20px;
+    //left: calc(50% - 50px);
+    left: 41%;
   }
   
   .login-box h1 {
@@ -34,6 +39,7 @@ body {
     padding: 0 0 20px;
     text-align: center;
     font-size: 22px;
+    padding-top: 0px;
   }
   
   .login-box label {
