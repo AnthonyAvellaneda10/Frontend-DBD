@@ -193,13 +193,18 @@ export class CotizacionComponent implements OnInit {
   
 
   solicitarCotizacion(){
+      console.log("hola: ", this.usuario)
+      console.log("hola mundo: ", this.correoSession)
+
+      console.log("hola sesion: ", sessionStorage.getItem('email'))
+
     let formularioCotizacion: Cotizacion;
 
     formularioCotizacion = {
       domicilioRetiro: this.domicilio_retiro,
       domicilioEnvio: this.domicilio_envio,
       observaciones: this.observacion,
-      correo: this.correoSession,
+      correo: sessionStorage.getItem('email')!,
       tipoCarga: this.valorTipoCarga,
       peso: this.peso,
       volumen: this.volumen,

@@ -26,6 +26,11 @@ export class PantallaUsuarioComponent implements OnInit {
     //this.firstName = JSON.parse(sessionStorage.getItem('Nombre') || "[]")
     
   }
+
+  listaCotizacionUsuario(){
+    this.router.navigate(['listaCotizacionUsuario']);
+  }
+
   cerrarSesion(){
     this.router.navigate(['login']);
     //sessionStorage.removeItem('Nombre')

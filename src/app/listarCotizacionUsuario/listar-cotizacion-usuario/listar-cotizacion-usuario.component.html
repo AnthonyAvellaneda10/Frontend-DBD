@@ -14,34 +14,11 @@
         </ul> 
       </nav>
     
-    <div *ngIf="cotizacionUser == null">
-        <h2> No tiene ninguna solicitud</h2>
+    <div *ngIf="cotizacionUser.length == 0">
+        <h2> Usted aún no ha realizado ninguna solicitud</h2>
     </div>
-    
-    
-    <!--<div class="container" *ngIf="cotizacionUser != null">
-        <div class="card m-5 p-3">
-            <div class="card-body">
-                <table class="table table-bordered table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th>Domicilio de envio</th>
-                            <th>Domicilio de retiro</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let object of cotizacionUser">
-                            <td>{{object.domicilioEnvio}}</td>
-                            <td>{{object.domicilioRetiro}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-    
-        </div>
-    </div>-->
 
-    <div *ngIf="cotizacionUser != null">
+    <div *ngIf="cotizacionUser.length != 0">
         <table style="margin-left: 150px;">
             <caption>Sus cotizaciones</caption>
             <thead>

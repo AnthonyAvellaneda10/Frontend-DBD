@@ -69,7 +69,7 @@ export interface Cotizacion{
 	peso?: number;
 	volumen?: number;
 	observaciones?: string;
-	correo?:any
+	correo?:string
 }
 
 export interface Servicio{

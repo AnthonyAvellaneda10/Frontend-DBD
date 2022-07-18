@@ -44,31 +44,41 @@ export class ListarCotizacionUsuarioComponent implements OnInit {
       sessionStorage.setItem('Apellido_materno', data.apellido_materno!)
       sessionStorage.setItem('Phone', data.nro_celular!)
       sessionStorage.setItem('email', data.correo!)
-      document.getElementById("DNI")?.setAttribute("value", data.dni!)
+      /*document.getElementById("DNI")?.setAttribute("value", data.dni!)
       document.getElementById("Nombres")?.setAttribute("value", data.nombres!)
       document.getElementById("Apellido_paterno")?.setAttribute("value", data.apellido_paterno!)
       document.getElementById("Apellido_materno")?.setAttribute("value", data.apellido_materno!)
       document.getElementById("Phone")?.setAttribute("value", data.nro_celular!)
-      document.getElementById("email")?.setAttribute("value", data.correo!)
-    });
+      document.getElementById("email")?.setAttribute("value", data.correo!)*/
+    //}
+    //);
 
-    this.dniSession = sessionStorage.getItem('Dni')
-    this.nombreSession = sessionStorage.getItem('Nombres')
-    this.apellidPaternoSession = sessionStorage.getItem('Apellido_paterno')
-    this.apellidoMaternoSession = sessionStorage.getItem('Apellido_materno')
-    this.phoneSession = sessionStorage.getItem('Phone')
-    this.correoSession = sessionStorage.getItem('email')
+   
+    /*this.correoSession = sessionStorage.getItem('email')
+
+    console.log("Correo sesion: ",  this.correoSession)
 
     document.getElementById("DNI")?.setAttribute("value", this.dniSession)
     document.getElementById("Nombres")?.setAttribute("value", this.nombreSession)
     document.getElementById("Apellido_paterno")?.setAttribute("value", this.apellidPaternoSession)
     document.getElementById("Apellido_materno")?.setAttribute("value", this.apellidoMaternoSession)
     document.getElementById("Phone")?.setAttribute("value", this.phoneSession)
-    document.getElementById("email")?.setAttribute("value", this.correoSession)*/
+    document.getElementById("email")?.setAttribute("value", this.correoSession)
 
+    let correoFinal;
+    if(this.usuario?.length != 0){
+      console.log("Paso 1: ",this.usuario)
+      correoFinal = this.usuario
+    }else if(this.correoSession.length != null){
+      console.log("Paso 2: ",this.correoSession)
+      correoFinal = this.correoSession
+    }
+
+    console.log("Final: ", correoFinal)*/
 
     this.listarCotizacionUsuarioService.cotizacionesUsuario(this.usuario).subscribe( data => {
       this.cotizacionUser = data.listaCotizacionUsuario;
+      console.log("Valor: ", this.cotizacionUser.length)
       console.log("Data usuario: ", data)
     });
   }
