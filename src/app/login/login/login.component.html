@@ -13,12 +13,12 @@
         <form>
           <!-- USERNAME INPUT -->
           <label for="username">Correo</label>
-          <input id="email" type="email" placeholder="Ingresa tu correo" name="email" >
+          <input id="email" type="email" placeholder="Ingresa tu correo" name="correo" [(ngModel)]="correo">
           <!-- PASSWORD INPUT -->
           <label for="password">Contraseña</label>
-          <input id="password" type="password" placeholder="Ingresa tu constraseña" name="password" >
-          <!--<h1 type="hidden" class="text-red-500" style="font-size: 16px;">{{mensaje}}</h1>-->
-          <input type="submit" style="margin-top: 18px;"  value="Ingresar">
+          <input id="password" type="password" placeholder="Ingresa tu constraseña" name="contrasenia" [(ngModel)]="contrasenia">
+          <h1 type="hidden" class="text-red-500" style="font-size: 16px;">{{mensaje}}</h1>
+          <input type="submit" style="margin-top: 18px;" (click)="iniciarSesion()" value="Ingresar">
           <!--<a href="#">Don't have An account?</a>-->
           <p class="text-xs" style="text-align: center;margin-top: 12px; font-size: 14px;">¿No tienes una cuenta?<a class="cursor-pointer" style="cursor: pointer; font-size: 14px;" (click)="registrate()"> Registrate</a></p>
           

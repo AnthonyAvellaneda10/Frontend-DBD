@@ -1,0 +1,47 @@
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a  class="enlace" style="padding-left: 35px;
+        width: 400px;">
+            <img src="https://shalom.com.pe/wp-content/uploads/2020/07/logo_shalom.png" alt="" class="logo">
+        </a>
+        <ul class="navbar-nav" >
+          <li><a style="cursor: pointer;">Bienvenido</a></li>
+          <li><a style="cursor: pointer;">{{firstName}}</a></li>
+        </ul> 
+    </nav>
+    
+    <div *ngIf="cotizacionUser == null">
+        <h2> No tiene ninguna solicitud</h2>
+    </div>
+    
+    
+    <div class="container">
+        <div class="card m-5 p-3">
+            <div class="card-body">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Phone number</th>
+                        <th>Address</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+            </div>
+    
+        </div>
+    </div>
+
+</body>
+
+
