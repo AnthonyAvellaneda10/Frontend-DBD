@@ -1,0 +1,108 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body style="background-color: aliceblue;">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a  class="enlace" style="padding-left: 35px;
+        width: 400px;">
+            <img src="https://shalom.com.pe/wp-content/uploads/2020/07/logo_shalom.png" alt="" class="logo">
+        </a>
+        <ul class="navbar-nav" >
+          <li><a style="cursor: pointer;">Bienvenido</a></li>
+          <li><a style="cursor: pointer;">{{firstName}}</a></li>
+        </ul> 
+    </nav>
+    
+    <div class="container" id="advanced-search-form">
+        <h2>Solicitar cotización</h2>
+        <form>
+            <div class="form-group">
+                <label for="first-name">DNI</label>
+                <input type="text" class="form-control" placeholder="DNI" id="DNI" value="" disabled>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Nombres</label>
+                <input type="text" class="form-control" placeholder="Nombres" id="Nombres" value="" disabled>
+            </div>
+            <div class="form-group">
+                <label for="country">Apellido paterno</label>
+                <input type="text" class="form-control" placeholder="Apellido paterno" id="Apellido_paterno" value="" disabled>
+            </div>
+            <div class="form-group">
+                <label for="number">Apellido materno</label>
+                <input type="text" class="form-control" placeholder="Apellido materno" id="Apellido_materno" value="" disabled>
+            </div>
+            <div class="form-group">
+                <label for="age">Número de celular</label>
+                <input type="text" class="form-control" placeholder="Phone" id="Phone" value="" disabled>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" placeholder="Email" id="email" value="" disabled>
+            </div>
+            <div class="form-group">
+                <label for="category">Tipo servicio</label>
+                <!--<input type="text" class="form-control" placeholder="Tipo de servicio" id="Tipo de servicio">-->
+                <div>
+                    <select [(ngModel)]="selectedValueTipoServicio" name="objeto" class="form-select" 
+                             (change)="onChange($event)">
+                        <option >Seleccione...</option>
+                        <option [value]="objeto.codigoTipoServicio" *ngFor="let objeto of tipoServicio">{{objeto.nombreTipoServicio}}</option>
+                    </select>
+                </div>
+                <!--<h3>{{valor}}</h3>-->
+            </div>
+            <div class="form-group">
+                <label for="education">Nombre servicio</label>
+                <div>
+                    <select [(ngModel)]="selectedValueNombreServicio" name="objetos" class="form-select" 
+                    (change)="onChanges($event)">
+                        <option >Seleccione...</option>
+                        <option [value]="objetos.codigoNombreServicio" *ngFor="let objetos of nombreServicio">{{objetos.nombreServicio}}</option>
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="education">Domicilio de retiro</label>
+                <input type="text" class="form-control" placeholder="Domicilio de retiro" id="Domicilio de retiro" name="domicilio_retiro" [(ngModel)]="domicilio_retiro">
+            </div>
+            <div class="form-group">
+                <label for="education">Domicilio de envio</label>
+                <input type="text" class="form-control" placeholder="Domicilio de envio" id="Domicilio de envio" name="domicilio_envio" [(ngModel)]="domicilio_envio">
+            </div>
+            <div class="form-group">
+                <label for="education">Tipo de carga</label>
+                <div>
+                    <select [(ngModel)]="selectedValueTipoCarga" name="objetoss" class="form-select" 
+                    (change)="onChangesCarga($event)">
+                        <option >Seleccione...</option>
+                        <option [value]="objetoss.codigoTipoCarga" *ngFor="let objetoss of tipoCarga">{{objetoss.nombreTipoCarga}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="education">Cantidad de bultos (kg)</label>
+                <input type="text" class="form-control" placeholder="Peso" id="Peso" name="peso" [(ngModel)]="peso">
+            </div>
+            <div class="form-group">
+                <label for="education">Volumen</label>
+                <input type="text" class="form-control" placeholder="Volumen" id="Volumen" name="volumen" [(ngModel)]="volumen">
+            </div>
+            <div class="form-group">
+                <label for="education">Observaciones</label>
+                <input type="text" class="form-control" placeholder="Escribe tu obsevación" id="observacion" name="observacion" [(ngModel)]="observacion">
+                <!--<textarea name="comentario"  rows="10" cols="50" placeholder="Escribe tu obsevación"></textarea>-->
+            </div>
+            <div class="clearfix"></div>
+            <button type="submit" (click)="solicitarCotizacion()" class="btn btn-info btn-lg btn-responsive" id="search"> <span class="glyphicon glyphicon-search"></span> Solicitar</button>
+        </form>
+    </div>
+</body>
