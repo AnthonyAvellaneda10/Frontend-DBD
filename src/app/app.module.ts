@@ -16,6 +16,9 @@ import { RegistroComponent } from './registro/registro/registro.component';
 import { SharedModule } from './shared/shared.module';
 import { BodyComponent } from './body/body/body.component';
 import { FooterComponent } from './footer/footer/footer.component';
+import { SeguimientoComponent } from './seguimiento/seguimiento/seguimiento.component';
+import { PlanificacionComponent } from './planificacion/planificacion/planificacion.component';
+import { GestionreclamoComponent } from './gestionreclamo/gestionreclamo/gestionreclamo.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { FooterComponent } from './footer/footer/footer.component';
     LoginComponent,
     RegistroComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    SeguimientoComponent,
+    PlanificacionComponent,
+    GestionreclamoComponent
   ],
   imports: [
     BrowserModule,
