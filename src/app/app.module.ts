@@ -19,6 +19,14 @@ import { FooterComponent } from './footer/footer/footer.component';
 import { RastrearComponent } from './rastrear/rastrear.component';
 import { PagaloComponent } from './pagalo/pagalo.component';
 
+import { PantallaUsuarioComponent } from './pantallaUsuario/pantalla-usuario/pantalla-usuario.component';
+import { CotizacionComponent } from './cotizacion/cotizacion/cotizacion.component';
+import { ListarCotizacionUsuarioComponent } from './listarCotizacionUsuario/listar-cotizacion-usuario/listar-cotizacion-usuario.component';
+import { SeguimientoComponent } from './seguimiento/seguimiento/seguimiento.component';
+import { PlanificacionComponent } from './planificacion/planificacion/planificacion.component';
+import { GestionreclamoComponent } from './gestionreclamo/gestionreclamo/gestionreclamo.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +37,16 @@ import { PagaloComponent } from './pagalo/pagalo.component';
     RegistroComponent,
     BodyComponent,
     FooterComponent,
+
+    PantallaUsuarioComponent,
+    CotizacionComponent,
+    ListarCotizacionUsuarioComponent,
+    SeguimientoComponent,
+    PlanificacionComponent,
+    GestionreclamoComponent,
     RastrearComponent,
     PagaloComponent
+
   ],
   imports: [
     BrowserModule,
