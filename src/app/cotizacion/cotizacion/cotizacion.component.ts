@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Carga, Cotizacion, ListaTipoServicio, NombreServicio, Persona, Servicio, TipoCarga, TipoServicio } from 'src/app/interfaces';
 import { DataService } from 'src/app/servicios/data.service';
@@ -53,7 +54,8 @@ export class CotizacionComponent implements OnInit {
 
   constructor(private listarObjetosService: ListarObjetosService, public dataService: DataService, 
     private obtenerDatosPersonales: ObtenerDatosPersonales, private registrarSolicitudCotizacionService: RegistrarSolicitudCotizacionService, 
-    private router: Router) { 
+    private router: Router, private titulo: Title) { 
+      titulo.setTitle('Solicitar cotización')
     }
 
   ngOnInit(): void {
