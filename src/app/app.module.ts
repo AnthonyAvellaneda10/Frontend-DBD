@@ -16,9 +16,14 @@ import { RegistroComponent } from './registro/registro/registro.component';
 import { SharedModule } from './shared/shared.module';
 import { BodyComponent } from './body/body/body.component';
 import { FooterComponent } from './footer/footer/footer.component';
+
+import { PantallaUsuarioComponent } from './pantallaUsuario/pantalla-usuario/pantalla-usuario.component';
+import { CotizacionComponent } from './cotizacion/cotizacion/cotizacion.component';
+import { ListarCotizacionUsuarioComponent } from './listarCotizacionUsuario/listar-cotizacion-usuario/listar-cotizacion-usuario.component';
 import { SeguimientoComponent } from './seguimiento/seguimiento/seguimiento.component';
 import { PlanificacionComponent } from './planificacion/planificacion/planificacion.component';
 import { GestionreclamoComponent } from './gestionreclamo/gestionreclamo/gestionreclamo.component';
+
 
 @NgModule({
   declarations: [
@@ -30,9 +35,13 @@ import { GestionreclamoComponent } from './gestionreclamo/gestionreclamo/gestion
     RegistroComponent,
     BodyComponent,
     FooterComponent,
+    PantallaUsuarioComponent,
+    CotizacionComponent,
+    ListarCotizacionUsuarioComponent,
     SeguimientoComponent,
     PlanificacionComponent,
     GestionreclamoComponent
+
   ],
   imports: [
     BrowserModule,

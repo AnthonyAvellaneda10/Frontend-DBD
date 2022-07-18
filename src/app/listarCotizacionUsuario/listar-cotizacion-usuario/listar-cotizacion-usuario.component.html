@@ -1,0 +1,41 @@
+<body style="background-color: aliceblue;">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a  class="enlace" style="padding-left: 35px;
+        width: 400px;">
+            <img src="https://shalom.com.pe/wp-content/uploads/2020/07/logo_shalom.png" alt="" class="logo">
+        </a>
+        <ul class="navbar-nav" >
+          <li><a style="cursor: pointer;">Bienvenido</a></li>
+          <li><a style="cursor: pointer;">{{firstName}}</a></li>
+        </ul> 
+      </nav>
+    
+    <div *ngIf="cotizacionUser.length == 0">
+        <h2> Usted aún no ha realizado ninguna solicitud</h2>
+    </div>
+
+    <div *ngIf="cotizacionUser.length != 0">
+        <table style="margin-left: 150px;">
+            <caption>Sus cotizaciones</caption>
+            <thead>
+              <tr style="background-color: beige;">
+                <th scope="col">Domicilio de envio</th>
+                <th scope="col">Domicilio de retiro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let object of cotizacionUser">
+                <td scope="row" data-label="Account">{{object.domicilioEnvio}}</td>
+                <td data-label="Due Date">{{object.domicilioRetiro}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+</body>
+
+
