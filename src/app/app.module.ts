@@ -16,6 +16,8 @@ import { RegistroComponent } from './registro/registro/registro.component';
 import { SharedModule } from './shared/shared.module';
 import { BodyComponent } from './body/body/body.component';
 import { FooterComponent } from './footer/footer/footer.component';
+import { RastrearComponent } from './rastrear/rastrear.component';
+import { PagaloComponent } from './pagalo/pagalo.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FooterComponent } from './footer/footer/footer.component';
     LoginComponent,
     RegistroComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    RastrearComponent,
+    PagaloComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,63 @@
+.conteiner {
+    margin-left: 12%;
+    background-color: azure;
+    width: 1000px;
+    height: 1100px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+body {
+    overflow-y: auto;
+}
+
+.entrada {
+    background-color: rgba(255, 255, 255, 0.815);
+    text-align: center;
+}
+
+button {
+    font-size: 1.25em;
+    background-color: blueviolet;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: rgb(118, 32, 199);
+}
+
+.parte2 {
+    background: rgba(104, 194, 137, 0.463);
+    width: 600px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+#estado-entrega {
+    padding: 10px;
+    color: chartreuse;
+    width: 500px;
+    margin: 40px;
+    background: rgba(100, 154, 225, 0.463);
+    float: left;
+}
+
+#detalle {
+    padding: 10px;
+    color: rgba(128, 255, 0, 0.703);
+    width: 200px;
+    margin: 40px;
+    background: rgba(100, 154, 225, 0.463);
+    float: left;
+}
+
+h1,
+h3,
+h4 {
+    color: rgba(10, 21, 77, 0.961);
+}
