@@ -2,17 +2,32 @@
 
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <title>Pagalo</title>
 </head>
 
 
 <body>
-    <app-navbar></app-navbar>
-    <app-header></app-header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a  class="enlace" style="padding-left: 35px;
+        width: 400px;">
+            <img src="https://shalom.com.pe/wp-content/uploads/2020/07/logo_shalom.png" alt="" class="logo">
+        </a>
+        <ul class="navbar-nav" >
+          <li><a style="cursor: pointer;">Bienvenido</a></li>
+          <li><a style="cursor: pointer;">{{firstName}}</a></li>
+        </ul> 
+    </nav>
+
+
     <div class="conteiner">
         <section>
             <div>
-                <h1>Pagalo</h1>
+                <h1>Págalo</h1>
                 <h3>Numero de Venta</h3>
                 <input class="entrada" type="text">
                 <h3>Codigo de Pago</h3>
@@ -24,7 +39,7 @@
             </div>
         </section>
 
-        <section class="parte2">
+        <section class="parte2" style="margin-top: -304px;">
             <div id="estado-entrega">
                 <h4>Pagos</h4>
                 <h3>Nombre del titular</h3>
@@ -44,4 +59,9 @@
             </div>
         </section>
     </div>
+    <div id="wrapper">
+        <button class="regresar" routerLink="/pantallaUsuario"> Regresar
+        </button>
+    </div>
+    <!--<button class="custom-btn btn-5" style="margin-left: 964px;" routerLink="/pantallaUsuario"><span>Regresar</span></button>-->
 </body>

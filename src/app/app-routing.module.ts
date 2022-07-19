@@ -14,6 +14,8 @@ import { PlanificacionComponent } from './planificacion/planificacion/planificac
 import { GestionreclamoComponent } from './gestionreclamo/gestionreclamo/gestionreclamo.component';
 import { PagaloComponent } from './pagalo/pagalo.component';
 import { RastrearComponent } from './rastrear/rastrear.component';
+import { ReclamoComponent } from './reclamo/reclamo/reclamo.component';
+import { PreguntasFrecuentesComponent } from './preguntasFrecuentes/preguntas-frecuentes/preguntas-frecuentes.component';
 const routes: Routes = [
 
   { path: "home", component: HomeComponent },
@@ -27,6 +29,8 @@ const routes: Routes = [
   { path: "gestionreclamo", component: GestionreclamoComponent },
   { path: "pagalo", component: PagaloComponent },
   { path: "rastrear", component: RastrearComponent },
+  { path: "reclamo",  component: ReclamoComponent},
+  { path: "preguntasFrecuentes", component: PreguntasFrecuentesComponent},
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "**", component: NotFoundComponent }
 

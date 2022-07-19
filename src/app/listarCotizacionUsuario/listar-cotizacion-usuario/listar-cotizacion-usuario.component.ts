@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { CotizacionUser, Persona } from 'src/app/interfaces';
 import { DataService } from 'src/app/servicios/data.service';
 import { ListarCotizacionUsuarioService } from 'src/app/servicios/listarCotizacionUsuario.service';
@@ -22,8 +23,8 @@ export class ListarCotizacionUsuarioComponent implements OnInit {
   phoneSession: any;
   correoSession: any;
 
-  constructor(private obtenerDatosPersonales: ObtenerDatosPersonales, public dataService: DataService, private listarCotizacionUsuarioService: ListarCotizacionUsuarioService) { 
-
+  constructor(private titulo: Title, private obtenerDatosPersonales: ObtenerDatosPersonales, public dataService: DataService, private listarCotizacionUsuarioService: ListarCotizacionUsuarioService) { 
+    titulo.setTitle('Ver cotización')
     
   }
 

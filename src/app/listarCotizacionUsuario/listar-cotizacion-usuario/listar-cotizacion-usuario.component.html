@@ -1,3 +1,8 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
 <body style="background-color: aliceblue;">
     <nav>
         <input type="checkbox" id="check">
@@ -5,7 +10,7 @@
             <i class="fas fa-bars"></i>
         </label>
         <a  class="enlace" style="padding-left: 35px;
-        width: 400px;">
+        width: 400px; left: 28.167px;">
             <img src="https://shalom.com.pe/wp-content/uploads/2020/07/logo_shalom.png" alt="" class="logo">
         </a>
         <ul class="navbar-nav" >
@@ -15,7 +20,10 @@
       </nav>
     
     <div *ngIf="cotizacionUser.length == 0">
-        <h2> Usted aún no ha realizado ninguna solicitud</h2>
+      <section id="welcome-section" style="padding-left: 30%;">
+        <h1>Hola, {{firstName}}</h1>
+        <p>Usted aún ha realizado ninguna cotización hasta el momento :(</p>
+      </section>
     </div>
 
     <div *ngIf="cotizacionUser.length != 0">
@@ -34,6 +42,11 @@
               </tr>
             </tbody>
           </table>
+    </div>
+
+    <div id="wrapper">
+      <button class="regresar" routerLink="/pantallaUsuario"> Regresar
+      </button>
     </div>
 
 </body>

@@ -25,6 +25,8 @@ import { ListarCotizacionUsuarioComponent } from './listarCotizacionUsuario/list
 import { SeguimientoComponent } from './seguimiento/seguimiento/seguimiento.component';
 import { PlanificacionComponent } from './planificacion/planificacion/planificacion.component';
 import { GestionreclamoComponent } from './gestionreclamo/gestionreclamo/gestionreclamo.component';
+import { ReclamoComponent } from './reclamo/reclamo/reclamo.component';
+import { PreguntasFrecuentesComponent } from './preguntasFrecuentes/preguntas-frecuentes/preguntas-frecuentes.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { GestionreclamoComponent } from './gestionreclamo/gestionreclamo/gestion
     PlanificacionComponent,
     GestionreclamoComponent,
     RastrearComponent,
-    PagaloComponent
+    PagaloComponent,
+    ReclamoComponent,
+    PreguntasFrecuentesComponent
 
   ],
   imports: [

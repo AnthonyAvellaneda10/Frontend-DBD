@@ -15,10 +15,10 @@
             <img src="https://shalom.com.pe/wp-content/uploads/2020/07/logo_shalom.png" alt="" class="logo">
         </a>
         <ul class="navbar-nav" >
-          <li><a style="cursor: pointer;">Bienvenido</a></li>
-          <li><a style="cursor: pointer;">{{firstName}}</a></li>
+          <li><a style="cursor: pointer; text-decoration: none">Bienvenido</a></li>
+          <li><a style="cursor: pointer; text-decoration: none">{{firstName}}</a></li>
         </ul> 
-    </nav>
+      </nav>
     
     <div class="container" id="advanced-search-form">
         <h2>Solicitar cotización</h2>
@@ -103,6 +103,7 @@
             </div>
             <div class="clearfix"></div>
             <button type="submit" (click)="solicitarCotizacion()" class="btn btn-info btn-lg btn-responsive" id="search"> <span class="glyphicon glyphicon-search"></span> Solicitar</button>
+            <!--<button type="submit" routerLink="/pantallaUsuario" class="btn btn-info btn-lg btn-responsive" id="search"> <span class="glyphicon glyphicon-search"></span> Cancelar</button>-->
         </form>
     </div>
 </body>

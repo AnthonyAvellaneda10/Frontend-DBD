@@ -7,8 +7,21 @@
 
 
 <body>
-    <app-navbar></app-navbar>
-    <app-header></app-header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a  class="enlace" style="padding-left: 35px;
+        width: 400px;">
+            <img src="https://shalom.com.pe/wp-content/uploads/2020/07/logo_shalom.png" alt="" class="logo">
+        </a>
+        <ul class="navbar-nav" >
+          <li><a style="cursor: pointer;">Bienvenido</a></li>
+          <li><a style="cursor: pointer;">{{firstName}}</a></li>
+        </ul> 
+    </nav>
+
     <div class="conteiner">
         <section>
             <div>
@@ -40,5 +53,10 @@
                 <p>------</p>
             </div>
         </section>
+    </div>
+
+    <div id="wrapper">
+        <button class="regresar" routerLink="/pantallaUsuario"> Regresar
+        </button>
     </div>
 </body>
