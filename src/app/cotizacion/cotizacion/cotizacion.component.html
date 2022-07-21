@@ -2,6 +2,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
 </head>
 
 <body style="background-color: aliceblue;">
@@ -82,7 +83,7 @@
                 <label for="education">Tipo de carga</label>
                 <div>
                     <select [(ngModel)]="selectedValueTipoCarga" name="objetoss" class="form-select" 
-                    (change)="onChangesCarga($event)">
+                    (change)="onChangesCarga($event)" >
                         <option >Seleccione...</option>
                         <option [value]="objetoss.codigoTipoCarga" *ngFor="let objetoss of tipoCarga">{{objetoss.nombreTipoCarga}}</option>
                     </select>
@@ -102,8 +103,8 @@
                 <!--<textarea name="comentario"  rows="10" cols="50" placeholder="Escribe tu obsevación"></textarea>-->
             </div>
             <div class="clearfix"></div>
-            <button type="submit" (click)="solicitarCotizacion()" class="btn btn-info btn-lg btn-responsive" id="search"> <span class="glyphicon glyphicon-search"></span> Solicitar</button>
-            <!--<button type="submit" routerLink="/pantallaUsuario" class="btn btn-info btn-lg btn-responsive" id="search"> <span class="glyphicon glyphicon-search"></span> Cancelar</button>-->
+            <button type="submit" routerLink="/pantallaUsuario"  class="btn btn-info btn-lg btn-responsive" id="search"> <span class="glyphicon "></span> Cancelar</button>
+            <button type="submit" (click)="solicitarCotizacion()" style="margin-left: 42px;" class="btn btn-info btn-lg btn-responsive" id="search"> <span class="glyphicon "></span> Solicitar</button>
         </form>
     </div>
 </body>

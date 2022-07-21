@@ -7,6 +7,7 @@ import { ListarObjetosService } from 'src/app/servicios/listarObjetos.service';
 import { ObtenerDatosPersonales } from 'src/app/servicios/obtenerDatosPersonales';
 import { RegistrarSolicitudCotizacionService } from 'src/app/servicios/registrarSolicitudCotizacion.service';
 
+
 @Component({
   selector: 'app-cotizacion',
   templateUrl: './cotizacion.component.html',
@@ -120,12 +121,12 @@ export class CotizacionComponent implements OnInit {
     let tipServicioUno: TipoServicio;
     let tipServicioDos: TipoServicio;
     tipServicioUno = {
-      codigoTipoServicio:1,
+      codigoTipoServicio: 1,
 	    nombreTipoServicio:"Transporte Nacional"
     }
 
     tipServicioDos = {
-      codigoTipoServicio:2,
+      codigoTipoServicio: 2,
 	    nombreTipoServicio:"Transporte Internacional"
     }
     this.tipoServicio2.push(tipServicioUno)
@@ -138,17 +139,17 @@ export class CotizacionComponent implements OnInit {
     let tipCargaDos: TipoCarga;
     let tipCargaTres: TipoCarga;
     tipCargaUno = {
-        codigoTipoCarga:21,
+        codigoTipoCarga: 21,
         nombreTipoCarga:"Liviano"
       }
 
       tipCargaDos = {
-        codigoTipoCarga:22,
+        codigoTipoCarga: 22,
         nombreTipoCarga:"Peso Regular"
       }
 
       tipCargaTres = {
-        codigoTipoCarga:23,
+        codigoTipoCarga: 23,
         nombreTipoCarga:"Pesado"
       }
       this.tipoCarga2.push(tipCargaUno)
@@ -163,7 +164,8 @@ export class CotizacionComponent implements OnInit {
     const newal = event.target.value;
     
     console.log("description: ",  this.tipoServicio[newal - 1].nombreTipoServicio)
-    this.valorNombreTipoServicio = this.tipoServicio[newal - 1].nombreTipoServicio;
+    //this.valorNombreTipoServicio = this.tipoServicio[newal - 1].nombreTipoServicio;
+    this.valorNombreTipoServicio = newal;
     this.listarObjetosService.listarNombresServicios(newal).subscribe(data =>{
       this.nombreServicio = data.listaNombreServicio;
       console.log("Data: ",data);
@@ -173,13 +175,14 @@ export class CotizacionComponent implements OnInit {
     const newals = event.target.value;
     console.log("Valor: ", newals);
 
-    if(newals <= 9){
+    /*if(newals <= 9){
       console.log("description: ",  this.nombreServicio[newals - 6].nombreServicio)
       this.valorNombreServicio = this.nombreServicio[newals - 6].nombreServicio;
     }else{
       console.log("description: ",  this.nombreServicio[newals - 10].nombreServicio)
       this.valorNombreServicio = this.nombreServicio[newals - 10].nombreServicio;
-    }
+    }*/
+    this.valorNombreServicio = newals;
   }
 
   public onChangesCarga(event:any): void { 
@@ -187,12 +190,11 @@ export class CotizacionComponent implements OnInit {
     console.log("Valor: ", newalss);
 
    console.log("description: ",  this.tipoCarga[newalss - 21].nombreTipoCarga),
-    this.valorTipoCarga = this.tipoCarga[newalss - 21].nombreTipoCarga,
+    //this.valorTipoCarga = this.tipoCarga[newalss - 21].nombreTipoCarga,
+    this.valorTipoCarga = newalss,
     console.log("valor tipo carga: ", this.valorTipoCarga)
     
   }
-
-  
 
   solicitarCotizacion(){
       console.log("hola: ", this.usuario)
@@ -213,9 +215,12 @@ export class CotizacionComponent implements OnInit {
       servicio: this.valorNombreTipoServicio,
       nombreService: this.valorNombreServicio
     }
-
+    
     this.registrarSolicitudCotizacionService.registrarSolicitud(formularioCotizacion).subscribe( data => {
       console.log("Pintar: ", data);
+      alert('Solicitud aceptada :)'),
+      
+      
       this.router.navigate(['pantallaUsuario']);
         /*this.persona = data;
 
@@ -227,6 +232,7 @@ export class CotizacionComponent implements OnInit {
     //}
     //,err => {this.mensaje = err;}
     );
+    
 
     //console.log("Hola: ", solicitarCotizacion.selectedValueTipoServicio)
     /*console.log("Domicilio retiro: ", this.domicilio_retiro)

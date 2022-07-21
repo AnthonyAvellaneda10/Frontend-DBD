@@ -3,6 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/servicios/data.service';
 
+
 @Component({
   selector: 'app-pantalla-usuario',
   templateUrl: './pantalla-usuario.component.html',
@@ -18,6 +19,7 @@ export class PantallaUsuarioComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     if(sessionStorage.getItem('Nombre') != null){
       this.firstName = sessionStorage.getItem('Nombre')
     }
