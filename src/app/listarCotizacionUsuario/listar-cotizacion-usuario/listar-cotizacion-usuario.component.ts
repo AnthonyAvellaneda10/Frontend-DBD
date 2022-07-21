@@ -14,6 +14,7 @@ export class ListarCotizacionUsuarioComponent implements OnInit {
   usuario?: string;
   firstName?: any
   cotizacionUser: CotizacionUser[] = [];
+  cotizacionUser2: CotizacionUser[] = [];
   persona?: Persona;
 
   dniSession: any;
@@ -22,6 +23,7 @@ export class ListarCotizacionUsuarioComponent implements OnInit {
   apellidoMaternoSession: any;
   phoneSession: any;
   correoSession: any;
+  lista:number [] = [];
 
   constructor(private titulo: Title, private obtenerDatosPersonales: ObtenerDatosPersonales, public dataService: DataService, private listarCotizacionUsuarioService: ListarCotizacionUsuarioService) { 
     titulo.setTitle('Ver cotización')
@@ -79,8 +81,28 @@ export class ListarCotizacionUsuarioComponent implements OnInit {
 
     this.listarCotizacionUsuarioService.cotizacionesUsuario(this.usuario).subscribe( data => {
       this.cotizacionUser = data.listaCotizacionUsuario;
+      let length0fObject = 0;
+      
+      
+      let indice = 0
+      this.cotizacionUser.forEach(cotizacion => {
+        //indice++
+        indice += 1
+        cotizacion.id = indice
+        this.cotizacionUser2.push(cotizacion)
+      })
+      console.log("dddddd: ", this.cotizacionUser2)
+  
+      /*for(let key in data.listaCotizacionUsuario){
+        console.log("key: ", key)
+        length0fObject++;
+        this.lista.push(length0fObject);
+      }
+      console.log("Longitud: ", length0fObject)
+      this.cotizacionUser.push(this.lista)
+      console.log("Lista: ", lista)
       console.log("Valor: ", this.cotizacionUser.length)
-      console.log("Data usuario: ", data)
+      console.log("Data usuario: ", data)*/
     });
   }
 

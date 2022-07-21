@@ -33,8 +33,8 @@ export class CotizacionComponent implements OnInit {
   // DATOS OBTENIDOS DEL FORMULARIO
   domicilio_retiro?: string;
   domicilio_envio?: string;
-  peso?: number;
-  volumen?: number;
+  peso?: Number;
+  volumen?: Number;
   observacion?: string;
   nameTipoServicio?:string = '';
   typeServicio?:string;
@@ -215,23 +215,37 @@ export class CotizacionComponent implements OnInit {
       servicio: this.valorNombreTipoServicio,
       nombreService: this.valorNombreServicio
     }
-    
-    this.registrarSolicitudCotizacionService.registrarSolicitud(formularioCotizacion).subscribe( data => {
-      console.log("Pintar: ", data);
-      alert('Solicitud aceptada :)'),
-      
-      
-      this.router.navigate(['pantallaUsuario']);
-        /*this.persona = data;
 
-        this.nombreCompleto = this.persona.nombres + ' ' + this.persona.apellido_paterno; 
-        this.dataService.usuario = this.correo;
-        sessionStorage.setItem('Nombre', this.nombreCompleto)
-        this.router.navigate(['pantallaUsuario']);*/
-      }
-    //}
-    //,err => {this.mensaje = err;}
-    );
+    console.log("correo: ", formularioCotizacion.correo)
+
+    if(formularioCotizacion.correo != null && formularioCotizacion.domicilioEnvio != null &&
+      formularioCotizacion.domicilioRetiro != null && formularioCotizacion.nombreService != null &&
+      formularioCotizacion.observaciones != null && formularioCotizacion.peso != null && 
+      formularioCotizacion.servicio != null && formularioCotizacion.tipoCarga != null && formularioCotizacion.volumen != null){
+      
+        this.registrarSolicitudCotizacionService.registrarSolicitud(formularioCotizacion).subscribe( data => {
+          console.log("Pintar: ", data);
+          alert('Solicitud aceptada :)'),
+          
+          this.router.navigate(['pantallaUsuario']);
+            /*this.persona = data;
+    
+            this.nombreCompleto = this.persona.nombres + ' ' + this.persona.apellido_paterno; 
+            this.dataService.usuario = this.correo;
+            sessionStorage.setItem('Nombre', this.nombreCompleto)
+            this.router.navigate(['pantallaUsuario']);*/
+          }
+        //}
+        //,err => {this.mensaje = err;}
+        );
+        
+    }
+    else{
+      alert('Error!, rellene todos los campos por favor')
+    }
+    
+    
+    
     
 
     //console.log("Hola: ", solicitarCotizacion.selectedValueTipoServicio)

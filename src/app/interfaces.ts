@@ -66,8 +66,8 @@ export interface Cotizacion{
 	tipoCarga?:string;
 	domicilioRetiro?:string;
 	domicilioEnvio?: string;
-	peso?: number;
-	volumen?: number;
+	peso?: Number;
+	volumen?: Number;
 	observaciones?: string;
 	correo?:string
 }
@@ -88,11 +88,12 @@ export interface Carga{
 	codigoCarga?:number;
 	tipoCarga?:string;
 	domicilio_envio?: string;
-	peso?: number;
-	volumen?: number;
+	peso?: Number;
+	volumen?: Number;
 }
 
 export interface CotizacionUser{
+	id?: number;
 	domicilioEnvio?:string;
 	domicilioRetiro?:string;
 }
