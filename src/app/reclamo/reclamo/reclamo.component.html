@@ -1,57 +1,57 @@
 <div>
-    <head>
-        <meta charset="utf-8">
-        <title>Login Form Design One | Fazt</title>
-      </head>
-    <body>
-    
-      <div class="login-box " style="margin-top: 50px;">
-        <img src="../../../assets/imagenes/LogoForm.png" class="avatar" alt="Avatar Image">
-        <h1>Reclamo</h1>
-        <form>
-          <!-- DNI INPUT -->
-            <div>
-              <label for="name">DNI</label>
-              <input type="text" placeholder="Ingresa tu número de DNI" name="nombre" [(ngModel)]="dni" >
-            </div>
-            
-            <!-- NAME INPUT -->
-            <div>
-              <label for="name">Nombres</label>
-              <input type="text" placeholder="Ingresa tus nombres" name="nombre" [(ngModel)]="nombres"> 
-            </div>
-             
-            <!-- LAST NAME INPUT -->
-            <div>
-              <label for="last-name">Apellido Paterno</label>
-              <input type="text" placeholder="Ingresa tu apellido paterno" name="apellido" [(ngModel)]="apellidoPaterno"> 
-              <label for="last-name">Apellido Materno</label>
-              <input type="text" placeholder="Ingresa tu apellido materno" name="apellido" [(ngModel)]="apellidoMaterno"> 
-            </div>
+  <head>
+      <meta charset="utf-8">
+      <title>Login Form Design One | Fazt</title>
+    </head>
+  <body>
+  
+    <div class="login-box " style="margin-top: 50px;">
+      <img src="../../../assets/imagenes/LogoForm.png" class="avatar" alt="Avatar Image">
+      <h1>Reclamo</h1>
+      <form>
+        <!-- DNI INPUT -->
+          <div>
+            <label for="name">DNI</label>
+            <input type="text" placeholder="Ingresa tu número de DNI" name="nombre" [(ngModel)]="dni"  id="dni">
+          </div>
+          
+          <!-- NAME INPUT -->
+          <div>
+            <label for="name">Nombres</label>
+            <input type="text" placeholder="Ingresa tus nombres" name="nombre" [(ngModel)]="nombres" id="nombres"> 
+          </div>
+           
+          <!-- LAST NAME INPUT -->
+          <div>
+            <label for="last-name">Apellido Paterno</label>
+            <input type="text" placeholder="Ingresa tu apellido paterno" name="apellido" [(ngModel)]="apellidoPaterno" id="apellidoPaterno"> 
+            <label for="last-name">Apellido Materno</label>
+            <input type="text" placeholder="Ingresa tu apellido materno" name="apellido" [(ngModel)]="apellidoMaterno" id="apellidoMaterno"> 
+          </div>
 
-          <!-- EMAIL INPUT -->
-          <div>
-            <label for="username">Tipo Reclamo</label>
-            <input type="text" placeholder="Asunto Reclamo" name="tipoReclamo" [(ngModel)]="tipoReclamo"> 
-          </div>
-          
-          <!-- PASSWORD INPUT -->
-          <div>
-            <label for="descripcion">Descripcion</label>
-            <input type="text" placeholder="Detalle reclamo" name="descripcion" [(ngModel)]="descripcion"> 
-          </div>
-          
-          <!--<h1 type="hidden" class="text-red-500" style="font-size: 16px;">{{mensaje}}</h1>-->
-          <div class="enviar">
-            <input type="button" value="Enviar">
-          </div>
-          <div class="cancelar">
-            <input type="button" routerLink="/pantallaUsuario" value="Cancelar" >
-          </div>
-          
-          <!--<a href="#">Don't have An account?</a>-->
-          
-        </form>
-      </div>
-    </body>
+        <!-- EMAIL INPUT -->
+        <div>
+          <label for="username">Tipo Reclamo</label>
+          <input type="text" placeholder="Asunto Reclamo" name="tipoReclamo" [(ngModel)]="tipoReclamo" id="tipoReclamo"> 
+        </div>
+        
+        <!-- PASSWORD INPUT -->
+        <div>
+          <label for="descripcion">Descripcion</label>
+          <input type="text" placeholder="Detalle reclamo" name="descripcion" [(ngModel)]="descripcion" id="descripcion"> 
+        </div>
+        
+        <!--<h1 type="hidden" class="text-red-500" style="font-size: 16px;">{{mensaje}}</h1>-->
+        <div class="enviar">
+          <input type="button" (click)="enviarReclamo()" value="Enviar">
+        </div>
+        <div class="cancelar">
+          <input type="button" routerLink="/pantallaUsuario" value="Cancelar" >
+        </div>
+        
+        <!--<a href="#">Don't have An account?</a>-->
+        
+      </form>
+    </div>
+  </body>
 </div>

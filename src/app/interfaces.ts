@@ -115,3 +115,64 @@ export interface RegistroPago {
 	codigo_pago?: number;
 	nro_venta?: number;
 }
+
+//
+export interface PersonaReclamo{
+    id_persona ?: number;
+    dni?: String;
+    correo ?: String;
+    nombres ?: String;
+    apellido_paterno ?: String;
+    apellido_materno ?: String;
+    nro_celular ?: String
+
+}
+
+export interface PersonalReclamo{
+    codigo_personal ?: String;
+    contrasenia ?: String;
+    cargo ?: String;
+    tipo_usuario ?: String;
+    persona?: PersonaReclamo;
+
+}
+
+export interface Reclamo{
+    tipo_reclamo ?: String;
+    descripcion ?: String;
+    rpta_reclamo ?: String;
+    servicioTransporte ?: ServicioTransporte ;
+    personal ?: PersonalReclamo;
+}
+
+export interface ServicioTransporte{
+    nombre_servicio ?: String;
+    tipo_servicio ?: String;
+    usuario ?: UsuarioReclamo;
+}
+
+export interface UsuarioReclamo{
+    cod_usuario ?: String;
+    contrasenia ?: String;
+    tipo_usuario ?: String;
+    persona ?: PersonaReclamo
+}
+
+export interface TipoReclamo{
+	codigotipoReclamo?:number;
+	nombreTipoReclamo?:string;
+}
+
+export interface ListaTipoReclamo{
+	listaTipoReclamo: TipoReclamo [];
+}
+
+export interface ReclamoUser{
+	descripcion?:string;
+	rpta_reclamo?:string;
+}
+
+export interface ListaReclamoUser{
+	listaReclamoUsuario: ReclamoUser [];
+}
+//
