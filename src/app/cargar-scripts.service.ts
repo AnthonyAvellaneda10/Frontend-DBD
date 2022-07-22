@@ -7,8 +7,7 @@ export class CargarScriptsService {
 
   constructor() { }
 
-  Carga(archivos:string[])
-  {
+  Carga(archivos: string[]) {
     for (let archivo of archivos) {
       let script = document.createElement("script");
       script.src = "./../assets/js/" + archivo + ".js";

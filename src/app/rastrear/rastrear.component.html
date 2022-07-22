@@ -12,45 +12,66 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <a  class="enlace" style="padding-left: 35px;
+        <a class="enlace" style="padding-left: 35px;
         width: 400px;">
             <img src="https://shalom.com.pe/wp-content/uploads/2020/07/logo_shalom.png" alt="" class="logo">
         </a>
-        <ul class="navbar-nav" >
-          <li><a style="cursor: pointer;">Bienvenido</a></li>
-          <li><a style="cursor: pointer;">{{firstName}}</a></li>
-        </ul> 
+        <ul class="navbar-nav">
+            <li><a style="cursor: pointer;">Bienvenido</a></li>
+            <li><a style="cursor: pointer;">{{firstName}}</a></li>
+        </ul>
     </nav>
 
     <div class="conteiner">
-        <section>
+        <section class="parte1">
             <div>
                 <h1>Rastrear Estado de Entrega</h1>
-                <h3>Numero de Venta</h3>
-                <input class="entrada" type="text">
                 <h3>Codigo de Pago</h3>
-                <input class="entrada" type="text"><br>
-                <button>Buscar</button>
+                <input class="entrada" type="text" id="codigo_pago" [(ngModel)]="codigo_pago">
+                <h3>Numero de venta</h3>
+                <input class="entrada" type="text" id="nro_venta" [(ngModel)]="nro_venta"><br>
+                <button (click)="buscarEstadoEntrega()">Buscar</button>
                 <p></p>
             </div>
         </section>
 
         <section class="parte2">
-            <div id="estado-entrega">
-                <h4>Estado de entrega</h4>
-                <p>------</p>
+            <div *ngIf="respuestaEntrega == null">
+                <h3>Codigo no encontrado</h3>
             </div>
-            <div id="detalle">
-                <h4>Origen</h4>
-                <p>------</p>
-                <h4>Destino</h4>
-                <p>------</p>
-                <h4>Recepcion</h4>
-                <p>------</p>
-                <h4>Destinario</h4>
-                <p>------</p>
-                <h4>Contenido</h4>
-                <p>------</p>
+            <div>
+                <table style="margin-left: 150px;">
+                    <caption>Su estado de entrega</caption>
+                    <thead *ngIf="respuestaEntrega != null">
+                        <tr>
+                            <td scope="col">Estado de entrega: </td>
+                            <td scope="col">{{respuestaEntrega.estado_entrega}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 10px;" scope="col">Origen: </td>
+                            <td style="padding-top: 10px;" scope="col"> {{respuestaEntrega.origen}} </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 10px;" scope="col">Destino: </td>
+                            <td style="padding-top: 10px;" scope="col">{{respuestaEntrega.destino}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 10px;" scope="col">Recepcion: </td>
+                            <td style="padding-top: 10px;" scope="col">{{respuestaEntrega.recepcion}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 10px;" scope="col">Destinatario: </td>
+                            <td style="padding-top: 10px;" scope="col">{{respuestaEntrega.destinatario}}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 10px;" scope="col">Contenido: </td>
+                            <td style="padding-top: 10px;" scope="col">{{respuestaEntrega.contenido}}</td>
+                        </tr>
+
+
+                    </thead>
+
+                </table>
             </div>
         </section>
     </div>
