@@ -13,7 +13,7 @@
 <div>
     <body>
       <body>
-        <div class="login-box">
+        <div class="login-box" style="margin-top: 20px;">
           <h1 class="text-white font-bold">RECLAMOS</h1>
           <form class="grid grid-cols-2 ">
             <!-- USERNAME INPUT -->
@@ -21,7 +21,7 @@
                 <input class="p-2 border-rose-600" id="dato_busqueda" style="border-radius: 22px; border: 3px solid brown; color: black;" type="dato_busqueda" placeholder="CODIGO, NOMBRES Y APELLIDOS, TIPO DE RECLAMO" name="dato_busqueda" >
             </div>
             <div>
-                <input type="submit" style="margin-top: 0px; width: 100px; margin-left: 250px"  value="Buscar">
+                <input type="submit" style="margin-top: 0px; width: 100px; margin-left: 312px"  value="Buscar">
             </div>
           </form>
           <table class="border-collapse border border-slate-600 ... text-2xl font-size">
@@ -35,13 +35,19 @@
             </thead>
             <tbody>
            <tr>
-                <td class="border border-slate-700 ...">Michigan</td>
-                <td class="border border-slate-700 ...">Detroit</td>
-                <td class="border border-slate-700 ...">Indianapolis</td>
+                <td class="border border-slate-700 ..."></td>
+                <td class="border border-slate-700 ..."></td>
+                <td class="border border-slate-700 ..."></td>
               </tr>
             </tbody>
           </table>
+          <p><textarea name="comentario" rows="8" cols="30" style="color: black; margin-left: 700px; border: 3px solid gray">Escribe aquí tu comentario: </textarea></p>
+          <div id="wrapper">
+            <button class="regresar" routerLink="/pantallaUsuario"> Responder
+            </button>
+          </div>
         </div>
+        
       </body>
     </body>
 </div>

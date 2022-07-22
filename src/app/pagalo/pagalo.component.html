@@ -8,60 +8,100 @@
 
 
 <body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <a  class="enlace" style="padding-left: 35px;
-        width: 400px;">
-            <img src="https://shalom.com.pe/wp-content/uploads/2020/07/logo_shalom.png" alt="" class="logo">
-        </a>
-        <ul class="navbar-nav" >
-          <li><a style="cursor: pointer;">Bienvenido</a></li>
-          <li><a style="cursor: pointer;">{{firstName}}</a></li>
-        </ul> 
-    </nav>
+    
+    <div class="contenedor">
 
+		<!-- Tarjeta -->
+		<section class="tarjeta" id="tarjeta">
+			<div class="delantera">
+				<div class="logo-marca" id="logo-marca">
+					<!-- <img src="img/logos/visa.png" alt=""> -->
+				</div>
+                <img src="../../assets/imagenes/img/chip-tarjeta.png" class="chip" alt="">
+				<div class="datos">
+					<div class="grupo" id="numero">
+						<p class="label">Número Tarjeta</p>
+						<p class="numero">#### #### #### ####</p>
+					</div>
+					<div class="flexbox">
+						<div class="grupo" id="nombre">
+							<p class="label">Nombre Tarjeta</p>
+							<p class="nombre">Jhon Doe</p>
+						</div>
 
-    <div class="conteiner">
-        <section>
-            <div>
-                <h1>Págalo</h1>
-                <h3>Numero de Venta</h3>
-                <input class="entrada" type="text">
-                <h3>Codigo de Pago</h3>
-                <input class="entrada" type="text"><br>
-                <button>Buscar</button>
-                <h3>Comprobante</h3>
-                <p>Nro de documento</p>
-                <p>Nombre completo</p>
-            </div>
-        </section>
+						<div class="grupo" id="expiracion">
+							<p class="label">Expiracion</p>
+							<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
 
-        <section class="parte2" style="margin-top: -304px;">
-            <div id="estado-entrega">
-                <h4>Pagos</h4>
-                <h3>Nombre del titular</h3>
-                <input type="text">
-                <h3>Correo Electronico</h3>
-                <input type="text">
-                <h3>Numero de tarjeta</h3>
-                <input type="text">
-                <p>------</p>
-                <h3>MM</h3>
-                <input type="text">
-                <h3>YY</h3>
-                <input type="text">
-                <h3>CVV</h3>
-                <input type="text"><br>
-                <button>Pagar envio</button>
-            </div>
-        </section>
-    </div>
+			<div class="trasera">
+				<div class="barra-magnetica"></div>
+				<div class="datos">
+					<div class="grupo" id="firma">
+						<p class="label">Firma</p>
+						<div class="firma"><p></p></div>
+					</div>
+					<div class="grupo" id="ccv">
+						<p class="label">CCV</p>
+						<p class="ccv"></p>
+					</div>
+				</div>
+				<p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem, voluptates illo.</p>
+				<a href="#" class="link-banco">www.tubanco.com</a>
+			</div>
+		</section>
+
+		<!-- Contenedor Boton Abrir Formulario -->
+		<div class="contenedor-btn">
+			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
+				<i class="fas fa-plus"></i>
+			</button>
+		</div>
+
+		<!-- Formulario -->
+		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+			<div class="grupo">
+				<label for="inputNumero">Número Tarjeta</label>
+				<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+			</div>
+			<div class="grupo">
+				<label for="inputNombre">Nombre</label>
+				<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+			</div>
+			<div class="flexbox">
+				<div class="grupo expira">
+					<label for="selectMes">Expiracion</label>
+					<div class="flexbox">
+						<div class="grupo-select">
+							<select name="mes" id="selectMes">
+								<option disabled selected>Mes</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+						<div class="grupo-select">
+							<select name="year" id="selectYear">
+								<option disabled selected>Año</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="grupo ccv">
+					<label for="inputCCV">CCV</label>
+					<input type="text" id="inputCCV" maxlength="3">
+				</div>
+			</div>
+			<button type="submit" class="btn-enviar">Enviar</button>
+		</form>
+	</div>
     <div id="wrapper">
         <button class="regresar" routerLink="/pantallaUsuario"> Regresar
         </button>
     </div>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <!--<button class="custom-btn btn-5" style="margin-left: 964px;" routerLink="/pantallaUsuario"><span>Regresar</span></button>-->
 </body>
